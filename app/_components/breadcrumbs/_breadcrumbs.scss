@@ -1,0 +1,36 @@
+@use "govuk/index" as govuk;
+
+$app-breadcrumbs-inverted-text-colour: govuk.govuk-colour("white");
+$app-breadcrumbs-inverted-border-colour: govuk.govuk-colour("light-blue");
+
+.app-breadcrumbs--inverted {
+  @include govuk.govuk-responsive-margin(6, "bottom");
+  margin-top: #{govuk.govuk-spacing(4) * -1};
+  padding: govuk.govuk-spacing(3) 0 govuk.govuk-spacing(2);
+  border-bottom: 1px solid $app-breadcrumbs-inverted-border-colour;
+  color: $app-breadcrumbs-inverted-text-colour;
+
+  @include govuk.govuk-media-query($from: tablet) {
+    margin-top: #{govuk.govuk-spacing(6) * -1};
+  }
+
+  .govuk-breadcrumbs__list-item::before {
+    border-color: $app-breadcrumbs-inverted-text-colour;
+  }
+
+  .govuk-breadcrumbs__list-item:last-child a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $app-breadcrumbs-inverted-text-colour;
+  }
+
+  a:focus {
+    color: govuk.$govuk-text-colour;
+  }
+}

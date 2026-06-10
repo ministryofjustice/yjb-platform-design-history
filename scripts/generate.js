@@ -7,8 +7,9 @@
   node scripts/generate.js name-of-directory-holding-images
 */
 
-import fs from 'node:fs'
-import { DateTime } from 'luxon'
+// Dependencies
+const fs = require('fs')
+const { DateTime } = require('luxon')
 
 // Arguments
 const directoryName = process.argv.slice(-1)[0]
@@ -19,7 +20,7 @@ const deepestDirectory = directoryName.split('/').pop()
 let title = deepestDirectory.replace(/-/g, ' ')
 title = title.charAt(0).toUpperCase() + title.slice(1)
 
-const dateStamp = DateTime.local().toFormat('yyyy-MM-dd')
+const datestamp = DateTime.local().toFormat('yyyy-MM-dd')
 
 const imageDirectory = `app/images/${directoryName}`
 const postDirectory = `app/posts/${directoryName}`.replace('/' + deepestDirectory, '')
@@ -33,7 +34,7 @@ function start () {
   generatePage()
 }
 
-function warnIfNoArguments () {
+function warnIfNoArguments (title) {
   // TODO: Use a better check for an argument
   if (directoryName.startsWith('/Users')) {
     console.log('No arguments set')
@@ -54,7 +55,7 @@ function makeDirectories () {
 function getExistingImages () {
   const files = fs.readdirSync(imageDirectory)
 
-  files.forEach(file => {
+  files.forEach((file, index) => {
     if (!(/\.(png|jpg)$/.test(file))) {
       console.log('Ignoring: ' + file)
       return
@@ -69,32 +70,40 @@ function getExistingImages () {
   })
 }
 
-function generateFrontMatter (items) {
-  return `---
-  title: ${title}
-  date: ${dateStamp}
-  screenshots:
-    ${items}
----`
-}
-
 function generatePage () {
-  let items = 'items:'
+  let template = ''
+  const templateStart = `---
+title: ${title}
+description:
+date: ${datestamp}
+---
+{% from "screenshots/macro.njk" import appScreenshots with context %}
+{{ appScreenshots({
+  items: [`
 
-  paths.forEach(item => {
-    items += `
-      - text: "${item.title}"
-        src: ${item.src}`
+  const templateEnd = `]
+}) }}
+`
+
+  paths.forEach(function (item, index) {
+    template += `${index > 0 ? ', ' : ''}{
+      text: "${item.title}",
+      img: { src: "${item.src}" }
+    }`
   })
 
-  const filename = `${postDirectory}/${dateStamp}-${deepestDirectory}.md`
+  const filename = `${postDirectory}/${datestamp}-${deepestDirectory}.md`
 
-  fs.writeFile(filename, generateFrontMatter(items), err => {
-    if (err) {
-      console.error(err)
+  fs.writeFile(
+    filename,
+    templateStart + template + templateEnd,
+    function (err) {
+      if (err) {
+        console.error(err)
+      }
+      console.log(`Page generated: ${filename}`)
     }
-    console.log(`Page generated: ${filename}`)
-  })
+  )
 }
 
 start()

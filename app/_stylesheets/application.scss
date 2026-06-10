@@ -1,0 +1,12 @@
+$govuk-global-styles: true;
+
+@use "govuk/index" as govuk;
+@use "_components/all.scss" as *;
+@use "vendor/prism.scss" as *;
+
+@media print {
+  // Force a white background when printing a page
+  .govuk-template {
+    background: #fff;
+  }
+}

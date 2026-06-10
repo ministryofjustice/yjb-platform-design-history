@@ -1,0 +1,45 @@
+@use "govuk/index" as govuk;
+// Forked from header fork on GOV.UK Design System
+// See: https://github.com/alphagov/govuk-design-system/blob/master/src/stylesheets/components/_header.scss
+
+// Override the default 33% width on the logo in GOV.UK Frontend (prevents
+// unnecessary wrapping of app.productName on smaller tablet / desktop
+// viewports)
+.app-header {
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+.app-header__logo {
+  width: auto;
+
+  // Remove right padding of app.productName as affects appearance on hover
+  .govuk-header__product-name {
+    padding-right: 0;
+  }
+}
+
+.app-header__link {
+  display: flex;
+}
+
+.app-header__logotype {
+  top: 0;
+}
+
+// Customisations to make larger HMPPS logo and smaller HMPPS text align
+.app-header__logotype-crown {
+  margin-right: 3px;
+}
+
+.app-header__logotype-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  vertical-align: super;
+}
+
+// .app-header__logotype-text,
+.app-header__product-name {
+  position: relative;
+  top: 3px;
+}

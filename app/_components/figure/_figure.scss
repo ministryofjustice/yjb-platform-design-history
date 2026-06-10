@@ -1,0 +1,42 @@
+@use "govuk/index" as govuk;
+
+.app-figure {
+  margin: 0;
+  @include govuk.govuk-responsive-margin(8, "bottom");
+
+  > a {
+    display: block;
+    outline: 1px solid rgba(govuk.$govuk-border-colour, 0.5);
+
+    &:hover {
+      outline-color: govuk.$govuk-link-hover-colour;
+    }
+
+    &:active {
+      outline-color: govuk.$govuk-link-active-colour;
+    }
+  }
+
+  a img {
+    outline: 0;
+  }
+
+  .app-figure__caption {
+    @include govuk.govuk-responsive-margin(4, "top");
+    @include govuk.govuk-font($size: 19);
+
+    h3 {
+      @extend %govuk-heading-s;
+    }
+
+    hr {
+      @extend %govuk-section-break--m;
+    }
+  }
+
+  figcaption {
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

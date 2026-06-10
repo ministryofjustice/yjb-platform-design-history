@@ -1,0 +1,41 @@
+@use "govuk/index" as govuk;
+
+.app-document-list {
+  list-style: none;
+  padding: 0;
+}
+
+.app-document-list__item {
+  border-bottom: 1px solid govuk.$govuk-border-colour;
+  margin-bottom: govuk.govuk-spacing(4);
+  padding-bottom: govuk.govuk-spacing(4);
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.app-document-list__item-title {
+  @include govuk.govuk-font($size: 24, $weight: "bold");
+  margin: 0 0 govuk.govuk-spacing(1);
+}
+
+.app-document-list__item-metadata {
+  padding: 0;
+  margin: 0;
+}
+
+.app-document-list__item-description {
+  @include govuk.govuk-font($size: 19);
+  margin: govuk.govuk-spacing(1) 0;
+}
+
+.app-document-list__attribute {
+  @include govuk.govuk-font($size: 16);
+  color: govuk.$govuk-secondary-text-colour;
+  display: inline-block;
+  margin: 0;
+  padding-right: govuk.govuk-spacing(4);
+}

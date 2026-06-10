@@ -1,0 +1,36 @@
+@use "govuk/index" as govuk;
+
+.app-masthead {
+  padding-top: govuk.govuk-spacing(6);
+  padding-bottom: govuk.govuk-spacing(6);
+  color: govuk.govuk-colour("white");
+  background-color: govuk.govuk-colour("blue");
+  margin-top: #{govuk.govuk-spacing(2) * -1};
+}
+
+.app-masthead * {
+  color: inherit;
+}
+
+.app-masthead__title {
+  @include govuk.govuk-font($size: 36, $weight: bold);
+  margin-top: 0;
+
+  .app-masthead--large & {
+    @include govuk.govuk-font($size: 48, $weight: "bold");
+  }
+}
+
+.app-masthead__description * {
+  @include govuk.govuk-font($size: 19);
+
+  .app-masthead--large * & {
+    @include govuk.govuk-font($size: 24);
+  }
+}
+
+.app-masthead__image {
+  img {
+    max-width: 100%;
+  }
+}

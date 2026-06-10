@@ -1,0 +1,24 @@
+@use "govuk/index" as govuk;
+
+.app-article__description {
+  color: govuk.$govuk-secondary-text-colour;
+  margin: 0 0 govuk.govuk-spacing(2);
+}
+
+.app-article__body {
+  @include govuk.govuk-responsive-margin(8, "bottom");
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.app-article__footer {
+  @include govuk.govuk-font($size: 16, $line-height: 1.5);
+  border-top: 1px solid govuk.$govuk-border-colour;
+  padding-top: govuk.govuk-spacing(2);
+
+  @include govuk.govuk-media-query($from: "tablet") {
+    max-width: 66%;
+  }
+}
