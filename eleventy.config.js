@@ -1,13 +1,14 @@
 import fs from 'node:fs/promises'
-
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
+
+const serviceName = 'YJB Platform design history'
 
 export default function (eleventyConfig) {
   // Options to customise the appearance of your design history
   // https://govuk-eleventy-plugin.x-govuk.org/get-started/options/
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
-      productName: 'Design History',
+      productName: serviceName,
       search: {
         indexPath: '/search-index.json',
         sitemapPath: '/sitemap'
@@ -16,6 +17,9 @@ export default function (eleventyConfig) {
     markdown: {
       headingPermalinks: true,
     },
+    serviceNavigation: {
+      serviceName,
+    },
     stylesheets: [
       '/styles/application.css'
     ],
@@ -23,9 +27,10 @@ export default function (eleventyConfig) {
       searchIndex: true,
       tags: true
     },
-    url:
-      process.env.GITHUB_ACTIONS &&
-      'https://x-govuk.org/govuk-design-history-template/'
+    titleSuffix: serviceName,
+    // url:
+    //   process.env.GITHUB_ACTIONS &&
+    //   'https://x-govuk.org/govuk-design-history-template/'
   })
 
   // Passthrough
@@ -51,6 +56,6 @@ export default function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_components'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-design-history-template/'
+    // pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-design-history-template/'
   }
 }
