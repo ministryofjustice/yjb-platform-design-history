@@ -7,10 +7,10 @@
 {% from "components/service-navigation/macro.njk" import appServiceNavigation with context %}
 
 {% block head %}
-<link href="/styles/application.css" rel="stylesheet">
+<link href="{{ '/styles/application.css' | url }}" rel="stylesheet">
 <meta property="og:title" content="{{ title }}">
 {% if description %}<meta property="og:description" name="description" content="{{ description | markdown('inline') | striptags(true) }}">{% endif %}
-<meta property="og:image" content="/images/opengraph-image.png">
+<meta property="og:image" content="{{ '/images/opengraph-image.png' | url }}">
 <meta name="robots" content="noindex nofollow">
 {% endblock %}
 
@@ -57,7 +57,7 @@
 
 {% block bodyEnd %}
   {% block scripts %}
-    <script src="/assets/application.js" type="module"></script>
+    <script src="{{ '/assets/application.js' | url }}" type="module"></script>
     {% block pageScripts %}{% endblock %}
   {% endblock %}
 {% endblock %}
