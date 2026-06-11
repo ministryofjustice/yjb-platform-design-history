@@ -27,9 +27,9 @@ export default function (eleventyConfig) {
       tags: true
     },
     titleSuffix: serviceName,
-    // url:
-    //   process.env.GITHUB_ACTIONS &&
-    //   'https://x-govuk.org/govuk-design-history-template/'
+    url:
+      process.env.GITHUB_ACTIONS &&
+      'https://ministryofjustice.github.io/yjb-platform-design-history/'
   })
 
   // Passthrough
