@@ -10,7 +10,6 @@ export default function (eleventyConfig) {
   // https://govuk-eleventy-plugin.x-govuk.org/get-started/options/
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
-      productName: serviceName,
       search: {
         indexPath: '/search-index.json',
         sitemapPath: '/sitemap'
