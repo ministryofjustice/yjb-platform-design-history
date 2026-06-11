@@ -6,12 +6,12 @@
       <div class="govuk-grid-column-two-thirds">
       {% if params.title %}
         <h1 class="app-masthead__title{%- if params.title.classes %} {{ params.title.classes }}{% endif %}">
-          {{ params.title.html | safe if params.title.html else params.title.text }}
+          {{ (params.title.html | safe if params.title.html else params.title.text) | noOrphans }}
         </h1>
       {% endif %}
       {% if params.description %}
         <div class="app-masthead__description{%- if params.description.classes %} {{ params.description.classes }}{% endif %}">
-          {{ params.description.html | safe if params.description.html else params.description.text }}
+          {{ (params.description.html | safe if params.description.html else params.description.text) | noOrphans }}
         </div>
       {% endif %}
       {% if params.startButton %}

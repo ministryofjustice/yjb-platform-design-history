@@ -12,10 +12,10 @@
   {% if params.footer %}
   <footer class="app-article__footer">
     {% if params.footer.date %}
-      Published <time datetime="{{ params.footer.date | date }}">{{ params.footer.date | date("d LLLL y") }}</time><br>
+      Published <time datetime="{{ params.footer.date | isoDate }}">{{ params.footer.date | govukDate }}</time><br>
     {% endif %}
     {% if params.footer.modified %}
-      Last updated <time datetime="{{ params.footer.modified | date }}">{{ params.footer.modified | date("d LLLL y") }}</time>
+      Last updated <time datetime="{{ params.footer.modified | isoDate }}">{{ params.footer.modified | govukDate }}</time>
     {% endif %}
   </footer>
   {% endif %}

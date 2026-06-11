@@ -6,7 +6,7 @@
 {% block content %}
   {% call appArticle({
     header: {
-      title: title | widont
+      title: title | noOrphans
     }
   }) %}
   {{ appProse({

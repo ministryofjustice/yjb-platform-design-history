@@ -1,8 +1,8 @@
 ---
 homepage: true
 layout: product
-title: A design history for your GOV.UK service
-description: A permanent record of how your service has developed over time.
+title: A design history for the YJB Platform
+description: A permanent record of how the YJB Platform is developing over time.
 pagination:
   data: collections.all
   reverse: true
