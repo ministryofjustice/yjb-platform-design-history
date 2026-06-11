@@ -1,5 +1,7 @@
+import date from './lib/filters/date.js'
 import fs from 'node:fs/promises'
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
+import widont from './lib/filters/widont.js'
 
 const serviceName = 'YJB Platform design history'
 
@@ -32,6 +34,10 @@ export default function (eleventyConfig) {
     //   process.env.GITHUB_ACTIONS &&
     //   'https://x-govuk.org/govuk-design-history-template/'
   })
+
+  // Filters
+  eleventyConfig.addFilter('date', date)
+  eleventyConfig.addFilter('widont', widont)
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
