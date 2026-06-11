@@ -35,8 +35,7 @@
     "uuid": "^14.0.0"
   },
   "devDependencies": {
-    "standard": "^17.1.2",
-    "webshot-node": "^0.18.3"
+    "standard": "^17.1.2"
   },
   "private": true,
   "engines": {
