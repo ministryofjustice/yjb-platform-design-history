@@ -83,7 +83,7 @@ $icon-size: 40px;
   display: block;
   position: relative;
   padding: govuk.govuk-spacing(2);
-  border-bottom: solid govuk.govuk-colour("mid-grey");
+  border-bottom: solid govuk.govuk-colour("black", $variant: "tint-80");
   border-width: 1px 0;
   cursor: pointer;
 }
@@ -118,7 +118,7 @@ $icon-size: 40px;
 }
 
 .app-site-search__option--no-results {
-  color: govuk.govuk-colour("dark-grey");
+  color: govuk.govuk-colour("black", $variant: "tint-25");
   background-color: govuk.govuk-colour("white");
   cursor: not-allowed;
 }
@@ -224,7 +224,7 @@ $icon-size: 40px;
 
 .app-site-search__hint {
   position: absolute;
-  color: govuk.govuk-colour("mid-grey");
+  color: govuk.govuk-colour("black", $variant: "tint-80");
 }
 
 .app-site-search__input {

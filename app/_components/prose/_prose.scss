@@ -56,7 +56,7 @@
   }
 
   code {
-    background-color: govuk.govuk-colour("light-grey");
+    background-color: govuk.govuk-colour("black", $variant: "tint-95");
     font-family: monospace;
     padding: 2px govuk.govuk-spacing(1);
   }
@@ -145,7 +145,7 @@
 
   pre {
     @extend %govuk-body-m;
-    background-color: govuk.govuk-colour("light-grey");
+    background-color: govuk.govuk-colour("black", $variant: "tint-95");
     padding: govuk.govuk-spacing(4);
     overflow: scroll;
   }
@@ -182,7 +182,7 @@
     text-decoration: none;
     font-style: italic;
     font-weight: normal;
-    color: govuk.govuk-colour("mid-grey");
+    color: govuk.govuk-colour("black", $variant: "tint-80");
     margin-right: 0.1em;
 
     @media (min-width: 1050px) {

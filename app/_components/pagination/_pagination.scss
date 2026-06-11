@@ -91,7 +91,7 @@
   }
 
   &:hover {
-    color: govuk.govuk-colour("light-blue");
+    color: govuk.govuk-colour("blue", $variant: "tint-25");
    }
 
   &:focus {

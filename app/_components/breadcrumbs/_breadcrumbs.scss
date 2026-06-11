@@ -1,7 +1,7 @@
 @use "govuk/index" as govuk;
 
 $app-breadcrumbs-inverted-text-colour: govuk.govuk-colour("white");
-$app-breadcrumbs-inverted-border-colour: govuk.govuk-colour("light-blue");
+$app-breadcrumbs-inverted-border-colour: govuk.govuk-colour("blue", $variant: "tint-25");
 
 .app-breadcrumbs--inverted {
   @include govuk.govuk-responsive-margin(6, "bottom");
