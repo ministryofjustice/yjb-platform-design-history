@@ -20,7 +20,7 @@ export default function (eleventyConfig) {
       serviceName,
     },
     stylesheets: [
-      '/styles/application.css'
+      '/assets/application.css'
     ],
     templates: {
       searchIndex: true,

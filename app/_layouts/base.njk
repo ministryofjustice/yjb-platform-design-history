@@ -7,7 +7,7 @@
 {% from "components/service-navigation/macro.njk" import appServiceNavigation with context %}
 
 {% block head %}
-<link href="{{ '/styles/application.css' | url }}" rel="stylesheet">
+<link href="{{ '/assets/application.css' | url }}" rel="stylesheet">
 <meta property="og:title" content="{{ title }}">
 {% if description %}<meta property="og:description" name="description" content="{{ description | markdown('inline') | striptags(true) }}">{% endif %}
 <meta property="og:image" content="{{ '/images/opengraph-image.png' | url }}">
