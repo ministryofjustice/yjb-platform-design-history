@@ -8,5 +8,7 @@ tags:
 
 This is the first practice at creating a YJB design history and documentation repository.
 
+![image](../images/Discovery-icon.jpg)
+
 Over the course of the delivery, we will continually update this site with more content.
 
