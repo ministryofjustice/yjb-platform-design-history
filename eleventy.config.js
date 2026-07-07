@@ -33,7 +33,7 @@ export default function (eleventyConfig) {
   })
 
   // Passthrough
-  eleventyConfig.addPassthroughCopy({ './app/images': '.' })
+  eleventyConfig.addPassthroughCopy({ './app/images': './images' })
 
   // Reset contents of output directory before each build
   eleventyConfig.on('eleventy.before', async ({ directories, runMode }) => {
