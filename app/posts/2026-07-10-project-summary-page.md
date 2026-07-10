@@ -85,45 +85,12 @@ Identified 10+ disconnected systems: Our desk research uncovered more than 10 se
 
 To measure exactly how difficult the legacy Youth Justice Application Framework (YJAF) is to use in practice, we adapted the scientific NASA Taskload Index into a simple 0 to 7 effort scale. The results showed a massive administrative burden sitting with staff, with Young Offender Institution (YOI) team members feeling the strain the absolute most.
 
-User group
-
-Mental demand score (0-7)
-
-Stress and frustration score (0-7)
-
-Effort to complete correctly score (0-7)
-
-YOI (secure estate)
-
-4.8
-
-5.4
-
-5.0
-
-Youth Custody Service (YCS)
-
-2.9
-
-3.7
-
-3.9
-
-Youth Justice Service (YJS)
-
-2.4
-
-3.0
-
-3.1
-
-Youth Justice Board (YJB)
-
-2.0
-
-2.5
-
-3.5
+| User group | Mental demand score<br>(0-7) | Stress and frustration score<br>(0-7) | Effort to complete correctly score<br>(0-7) |
+|---|---:|---:|---:|
+| YOI (secure estate) | 4.8 | 5.4 | 5.0 |
+| Youth Custody Service (YCS) | 2.9 | 3.7 | 3.9 |
+| Youth Justice Service (YJS) | 2.4 | 3.0 | 3.1 |
+| Youth Justice Board (YJB) | 2.0 | 2.5 | 3.5 |
 
 > "YJAF is so glitchy that I don’t trust typing directly into it. I write everything in Word and then paste it across—otherwise it just disappears." — Placements Team (YCS)
 
