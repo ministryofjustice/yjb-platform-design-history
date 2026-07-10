@@ -8,9 +8,11 @@ tags:
 
 ## The Youth Justice network
 
+![alt text for the image](../images/image.png)
+
 [Visual: Map of the youth justice system, the teams and connections.]
 
-The youth justice network across England and Wales is vast and deeply interconnected. This map illustrates the key organisations, local services, and day-to-day relationships that underpin the system.
+[The youth justice network](../first-post/) across England and Wales is vast and deeply interconnected. This map illustrates the key organisations, local services, and day-to-day relationships that underpin the system.
 
 ## A child's journey 
 
