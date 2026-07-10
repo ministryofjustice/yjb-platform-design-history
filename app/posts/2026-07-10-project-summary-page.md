@@ -59,9 +59,7 @@ We are now transitioning into the next phase. This is an experimental period whe
 
 ## Roadmap
 
-View the raw materials or read our detailed findings the Discovery Phase folder (link).
-
- 
+View the raw materials or read our detailed findings the [Discovery Phase folder](https://docs.google.com/presentation/d/1NG2mpuK6V0NqNUXmDVV6x2lR_KtyjN4tm8ljbRKH71I/edit?usp=sharing).
 
 ## Discovery phase
 
