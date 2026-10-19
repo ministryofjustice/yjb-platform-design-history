@@ -27,7 +27,7 @@
     "start": "npm run watch:files"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy": "^3.1.7",
     "@x-govuk/govuk-eleventy-plugin": "^9.0.2",
     "govuk-frontend": "^6.4.0",
     "http-server": "^14.1.1",
